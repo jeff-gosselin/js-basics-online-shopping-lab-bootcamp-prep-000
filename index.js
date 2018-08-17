@@ -10,13 +10,37 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+ var itemAdded = {};
+ 
+ itemAdded.itemName = item;
+ itemAdded.itemPrice = Math.floor(Math.random() * 100 + 1);
+ 
+ cart.push(itemAdded);
+ 
+ return `${item} has been added to your cart.`;
+ 
 }
 
 function viewCart() {
-  // write your code here
+  var itemsInCart = [];
+  if (cart.length === 0) {
+    return 'Your shopping cart is empty.';
+  } else {
+    
+    for (let i=0; i < cart.length; i++) {
+      var item;
+      item = `${cart[i].itemName} at $${cart[i].itemPrice}`;
+      itemsInCart.push(item);
+      }
+    // itemsInCart.join();
+    if (cart.length > 1) {
+    var lastItem = itemsInCart.splice(-1,1);
+    lastItem = `, and ${lastItem}`;
+    itemsInCart = `${itemsInCart.join(', ')}${lastItem}`;
+    }
+  return `In your cart, you have ${itemsInCart}.`;
 }
-
+}
 function total() {
   // write your code here
 }
