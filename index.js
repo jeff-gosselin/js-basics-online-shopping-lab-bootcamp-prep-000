@@ -34,7 +34,7 @@ function viewCart() {
       }
     // itemsInCart.join();
     if (cart.length > 1) {
-    var lastItem = itemsInCart.splice(-1,1);
+    var lastItem = itemsInCart.splice(-1);
     lastItem = `, and ${lastItem}`;
     itemsInCart = `${itemsInCart.join(', ')}${lastItem}`;
     }
