@@ -42,7 +42,12 @@ function viewCart() {
 }
 }
 function total() {
-  // write your code here
+  var cartTotal = [];
+  for (let i=0; i < cart.length; i++) {
+    cartTotal.push(cart[i].itemPrice);
+  }
+  cartTotal.join('+');
+  return cartTotal;
 }
 
 function removeFromCart(item) {
