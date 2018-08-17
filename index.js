@@ -54,9 +54,13 @@ function removeFromCart(item) {
   var find = true;
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName !== item) {
-      return 'That item is not in your cart.';
-    } 
+      find = false;
+    } else {
+      find = true;
+    }
   }
+  
+  if ()
   
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
