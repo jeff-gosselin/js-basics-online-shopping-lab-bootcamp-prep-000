@@ -51,7 +51,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var find = true;
+  var find;
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName !== item) {
       find = false;
@@ -60,7 +60,7 @@ function removeFromCart(item) {
     }
   }
   
-  if ()
+  if (find === true) {
   
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
@@ -68,6 +68,7 @@ function removeFromCart(item) {
       return cart;
     } 
   } 
+  }
 }
 
 function placeOrder(cardNumber) {
