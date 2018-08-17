@@ -51,9 +51,10 @@ function total() {
 }
 
 function removeFromCart(item) {
+  var find;
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName !== item) {
-      var find = false;
+      find = false;
     } else {
       cart.splice(i,1);
       return cart;
