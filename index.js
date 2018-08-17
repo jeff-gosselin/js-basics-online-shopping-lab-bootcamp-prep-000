@@ -59,7 +59,7 @@ function removeFromCart(item) {
     }
   } 
 
-  return ''
+  return 'That item is not in your cart.'
   
 }
 
