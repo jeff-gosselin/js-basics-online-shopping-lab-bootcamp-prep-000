@@ -9,6 +9,8 @@ function setCart(c) {
   return cart;
 }
 
+
+
 function addToCart(item) {
  var itemAdded = {};
  
@@ -18,15 +20,15 @@ function addToCart(item) {
  cart.push(itemAdded);
  
  return `${item} has been added to your cart.`;
- 
 }
+
+
 
 function viewCart() {
   var itemsInCart = [];
   if (cart.length === 0) {
     return 'Your shopping cart is empty.';
   } else {
-    
     for (let i=0; i < cart.length; i++) {
       var item;
       item = `${cart[i].itemName} at $${cart[i].itemPrice}`;
@@ -40,28 +42,31 @@ function viewCart() {
     }
   return `In your cart, you have ${itemsInCart}.`;
 }
+
+
+
 }
 function total() {
   var cartTotal = 0;
   for (let i=0; i < cart.length; i++) {
     cartTotal = cartTotal + cart[i].itemPrice;
   }
-  
   return cartTotal;
 }
 
+
+
 function removeFromCart(item) {
-  
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
       cart.splice(i,1);
       return cart;
     }
   } 
-
   return 'That item is not in your cart.'
-  
 }
+
+
 
 function placeOrder(cardNumber) {
   // write your code here
