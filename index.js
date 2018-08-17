@@ -55,8 +55,6 @@ function removeFromCart(item) {
   for (let i=0; i < cart.length; i++) {
     if (cart[i].itemName !== item) {
       find = false;
-    } else {
-      find = true;
     }
   }
   
