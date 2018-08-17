@@ -68,7 +68,9 @@ function removeFromCart(item) {
       return cart;
     } 
   } 
-  } else {
+  } 
+  
+  if (find === false) {
     return 'That item is not in your cart.';
   }
 }
