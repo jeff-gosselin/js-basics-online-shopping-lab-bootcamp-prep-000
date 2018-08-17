@@ -42,7 +42,7 @@ function viewCart() {
 }
 }
 function total() {
-  var cartTotal;
+  var cartTotal = 0;
   for (let i=0; i < cart.length; i++) {
     cartTotal = cartTotal + cart[i].itemPrice;
   }
