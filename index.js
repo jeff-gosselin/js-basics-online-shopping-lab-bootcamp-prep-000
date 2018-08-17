@@ -68,6 +68,8 @@ function removeFromCart(item) {
       return cart;
     } 
   } 
+  } else {
+    return ''
   }
 }
 
